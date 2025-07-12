@@ -1,10 +1,18 @@
 import React from 'react';
 import { Card } from '../card/card';
 import './card-list.css';
+import type { Planet } from '../../../shared/types';
 
-export class CardList extends React.Component {
-  constructor() {
-    super();
+// Record<string, never> = {}
+type Props = Record<string, never>;
+
+interface States {
+  planets: Planet[];
+}
+
+export class CardList extends React.Component<Props, States> {
+  constructor(props: Props) {
+    super(props);
     this.state = { planets: [] };
   }
 

@@ -1,12 +1,18 @@
 import React from 'react';
 
-export class Search extends React.Component {
-  constructor() {
-    super();
+// Record<string, never> = {}
+type Props = Record<string, never>;
+
+interface States {
+  searchValue: string;
+}
+export class Search extends React.Component<Props, States> {
+  constructor(props: Props) {
+    super(props);
     this.state = { searchValue: '' };
   }
 
-  handleChange = (e) => {
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ searchValue: e.target.value });
   };
 

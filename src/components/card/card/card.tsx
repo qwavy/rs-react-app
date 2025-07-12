@@ -1,7 +1,12 @@
 import React from 'react';
 import './card.css';
+import type { Planet } from '../../../shared/types';
 
-export class Card extends React.Component {
+interface Props {
+  data: Planet;
+}
+
+export class Card extends React.Component<Props> {
   componentDidMount(): void {
     console.log(this.props);
   }
