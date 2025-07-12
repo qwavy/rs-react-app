@@ -7,9 +7,6 @@ interface Props {
 }
 
 export class Card extends React.Component<Props> {
-  componentDidMount(): void {
-    console.log(this.props);
-  }
   render(): React.ReactNode {
     return (
       <div className="card">

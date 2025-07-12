@@ -18,7 +18,6 @@ export class Search extends React.Component<Props, States> {
 
   handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(this.state.searchValue);
     localStorage.setItem('searchValue', this.state.searchValue);
     fetch(
       `https://www.swapi.tech/api/planets/?name=${localStorage.getItem('searchValue')}`
